@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: salmon;
+    text-align: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    padding: 1px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 3em;
+    margin: 1em 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 1em 0;
+}
+
+button {
+    margin: 10px;
+    background-color: turquoise;
+    width: 100px;
+    height: 150px;
+    border-radius: 5px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.game-container {
+    display: none;
+}
+
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tiles-container,
+.utiles {
+    display: none;
+}
+
+.tiles-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: .25em;
+    row-gap: .25em;
+    width: fit-content;
+    margin-left: auto;
+}
+
+.tiles-container-3 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.btn {
+    padding: .5em 1.5em;
+    background: rgb(85, 195, 85);
+    font-size: 2em;
+    font-weight: bold;
+    width: auto;
+    height: auto;
+}
+
+.utiles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2em;
+    margin-right: auto;
+}
+
+#clicks-counter,
+#score,
+#timer,
+#level {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: .5em;
+}
+
+.leaderboard-section {
+    display: none;
+}
+
+#name-entry,
+#save-entry {
+    display: none;
+}
+
+.leaderboard-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leaderboard-score-container {
+    margin-left: 2em;
+}
+
+#name-entry,
+#save-entry {
+    margin-left: auto;
+    margin-right: auto;
+}

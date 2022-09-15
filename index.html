@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Matching tiles</title>
+        <link href="style.css" rel="stylesheet">
+        
+    </head>
+    <body>
+        <h1>Matcherino</h1>
+        <h2>Match the tiles!</h2>
+        <div class="start-screen">
+            <button id="start-game" class="btn">Start game</button>
+            <button id="leaderboard" class="btn">Leaderboard</button>
+        </div>
+        <div class="game-container">
+            <div class="tiles-container">
+            </div>
+            <div class="utiles">
+                <p id="level">Level: 1</p>
+                <p id="timer">Time left: &nbsp; 1 : 30</p>
+                <p id="score">Score: 0</p>
+                <p id="clicks-counter">Clicks: 0</p>
+                <button id="reset-btn" class="btn">Reset</button>
+            </div>
+        </div>
+        <div class="leaderboard-section">
+            <h2 id="leaderboard-title">Leaderboard</h2>
+            <div class="leaderboard-container">
+                <div class="leaderboard-name-container"></div>
+                <div class="leaderboard-score-container"></div>
+            </div>
+            <input type="text" id="name-entry">
+            <button id="save-entry" class="btn">Save entry</button>
+            <button id="delete-leaderboard" class="btn">Clear leaderboard</button>
+            <button id="new-game" class="btn">New game</button>
+        </div>
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
