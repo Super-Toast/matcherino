@@ -284,3 +284,9 @@ h1 {
         margin: .75em 0;
     }
 }
+
+@media (min-width: 900px) {
+    .tiles-container-3 {
+        gap: 1.25em;
+    }
+}
