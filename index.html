@@ -3,11 +3,12 @@
     <head>
         <title>Matching tiles</title>
         <link href="style.css" rel="stylesheet">
-        
+        <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&display=swap" rel="stylesheet">
     </head>
+    
     <body>
         <h1>Matcherino</h1>
-        <h2>Match the tiles!</h2>
+        <p class="description">Match the tiles!</p>
         <div class="start-screen">
             <button id="start-game" class="btn">Start game</button>
             <button id="leaderboard" class="btn">Leaderboard</button>
@@ -16,15 +17,17 @@
             <div class="tiles-container">
             </div>
             <div class="utiles">
-                <p id="level">Level: 1</p>
-                <p id="timer">Time left: &nbsp; 1 : 30</p>
-                <p id="score">Score: 0</p>
-                <p id="clicks-counter">Clicks: 0</p>
+                <div class="utiles-info">
+                    <p id="level">Level: 1</p>
+                    <p id="clicks-counter">Clicks: 0</p>
+                    <p id="score">Score: 0</p>
+                    <p id="timer">Time left: &nbsp; 1 : 30</p>
+                </div>
                 <button id="reset-btn" class="btn">Reset</button>
             </div>
         </div>
         <div class="leaderboard-section">
-            <h2 id="leaderboard-title">Leaderboard</h2>
+            <h2 class="leaderboard-title">Leaderboard</h2>
             <div class="leaderboard-container">
                 <div class="leaderboard-name-container"></div>
                 <div class="leaderboard-score-container"></div>

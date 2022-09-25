@@ -10,8 +10,8 @@ let boardLength = imgTiles.length / 2
 let tiles = imgTiles.length
 let countNumber=0
 let elClickCounter = 0
-let valuesMatrix = []
-let idMatrix = []
+let valuesArr = []
+let idArr = []
 
 const scoreEl = document.getElementById("score")
 const leaderboardContainer = document.querySelector(".leaderboard-container")
@@ -62,6 +62,7 @@ function startGame() {
     document.querySelector(".leaderboard-section").style.display = "none"
     document.querySelector(".game-container").style.display = "flex"
     timer()
+    window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
 }
 
 function assignValue() {  
@@ -79,12 +80,12 @@ function counter() {
 
 }
 
-function resetFunc(matrix) {
-    document.getElementById(matrix[0]).textContent = "?"
-    document.getElementById(matrix[1]).textContent = "?"
+function resetTiles(arr) {
+    document.getElementById(arr[0]).textContent = "?"
+    document.getElementById(arr[1]).textContent = "?"
 
-    document.getElementById(matrix[0]).disabled = false
-    document.getElementById(matrix[1]).disabled = false
+    document.getElementById(arr[0]).disabled = false
+    document.getElementById(arr[1]).disabled = false
 }
 
 function check() {
@@ -92,14 +93,14 @@ function check() {
     elClickCounter ++
 
     this.textContent = this.value
-    valuesMatrix.push(this.value)
-    idMatrix.push(this.id)
+    valuesArr.push(this.value)
+    idArr.push(this.id)
 
     this.disabled = true
 
     if(elClickCounter === 2) {
-        if(valuesMatrix[0] != valuesMatrix[1]) {
-            setTimeout(resetFunc, 750, idMatrix) 
+        if(valuesArr[0] != valuesArr[1]) {
+            setTimeout(resetTiles, 750, idArr) 
         } else {
             score += 10
             completeBoard ++
@@ -108,15 +109,15 @@ function check() {
                 setTimeout(newBoard, 750)
             }
         }
-        valuesMatrix = []
-        idMatrix = []
+        valuesArr = []
+        idArr = []
         elClickCounter = 0
     }
 }
 
 function newBoard() {
-    valuesMatrix = []
-    idMatrix = []
+    valuesArr = []
+    idArr = []
     level ++
     completeBoard = 0
     maxTicks += 15
@@ -138,8 +139,8 @@ function newBoard() {
 }
 
 function resetGame() {
-    valuesMatrix = []
-    idMatrix = []
+    valuesArr = []
+    idArr = []
     level = 1
     elClickCounter = 0
     countNumber = 0
@@ -152,6 +153,7 @@ function resetGame() {
         el.textContent = "?"
         el.disabled = false
     })
+    document.querySelector(".tiles-container").classList.remove("tiles-container-3")
     imgTiles = ["👽", "👽", "🤖", "🤖", "😁", "😁", "🤓", "🤓", "🦞", "🦞", "🚗", "🚗"]
     tiles = imgTiles.length
     generateTiles()
@@ -159,6 +161,7 @@ function resetGame() {
     assignValue()
     clearInterval(myInterval)
     timer()
+    window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
 }
 
 function timer(){
