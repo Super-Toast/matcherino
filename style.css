@@ -84,7 +84,7 @@ h1 {
 .start-screen::before,
 .start-screen::after {
     content: "?";
-    line-height: 50vh;
+    line-height: 330px;
     font-size: 5em;
     font-weight: bold;
     background-color: #44bcec;
@@ -234,6 +234,7 @@ h1 {
         font-size: 8em;
         width: 250px;
         height: 400px;
+        line-height: 430px;
     }
 
     .start-screen::before {
@@ -243,7 +244,7 @@ h1 {
     }
     
     .start-screen::after {
-        left: 70%;
+        left: 75%;
         top: 5vh;
         transform: rotate(25deg);
     }
